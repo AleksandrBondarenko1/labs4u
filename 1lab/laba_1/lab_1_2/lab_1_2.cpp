@@ -21,9 +21,6 @@ void initializeArray(float* arr, int n)
 		*(arr + i) = i * sin(M_PI * i / 25);
 	}
 }
-
-
-
 float** makeArray2D(float* arr1D, int a, int b)
 {
 	float** arr2D = new float* [a];
@@ -41,7 +38,6 @@ float** makeArray2D(float* arr1D, int a, int b)
 	}
 	return arr2D;
 }
-
 void multiplicationFirstElement(float** arr, int N, int M)
 {
 	for (int i = 0;i < N;i++)
@@ -49,14 +45,11 @@ void multiplicationFirstElement(float** arr, int N, int M)
 		float sum=0;
 		for (int j = 1;j < M;j++)
 		{
-
 			sum += arr[i][j];
-			
 		}
 		arr[i][0] = sum;
 	}
 }
-
 void printArray1D(float arr[], int n)
 {
 	for (int i = 0; i < n;++i)
@@ -65,12 +58,10 @@ void printArray1D(float arr[], int n)
 	}
 	
 }
-
 void printArray2D(float** arr, int N, int M)
 {
 	for (int i = 0;i < N;i++)
 	{
-		
 		for (int j = 0;j < M;j++)
 		{
 			printf("%f"" ", arr[i][j]);
@@ -78,22 +69,16 @@ void printArray2D(float** arr, int N, int M)
 		printf("\n");
 	}
 }
-
-
 	int main()
 	{
-		const int LEN = 25; //задаем параметры массивов
+		const int LEN = 25; 
 		const int N = 5;
 		const int M = 5;
-
-		float* arr = new float[LEN]; //выделяем память под массив
-
-		initializeArray(arr, LEN);// Инициализируем массив
-
-		printArray1D(arr, LEN); //вывод в консоль массива 1D
+		float* arr = new float[LEN]; 
+		initializeArray(arr, LEN);
+		printArray1D(arr, LEN); 
 		cout << "\n";
 		cout << "\n";
-		//конвертируем 1 мерный массив в 2 мерный
 		float** arr2D = makeArray2D(arr, N, M);
 		multiplicationFirstElement(arr2D, N, M);
 		printArray2D(arr2D, N, M);
