@@ -13,7 +13,7 @@ char* reverseChar(char* s, int c)
 		if (s[len] == c)
 		{
 			rest_of_string = s + len;
-			break; //Выход изи цикла после первого найденного совпадения 
+			break;  
 		}
 		len++;
 	}
