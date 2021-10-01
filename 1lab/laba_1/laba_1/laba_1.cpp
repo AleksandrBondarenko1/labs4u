@@ -39,9 +39,9 @@ void printArray(int arrX[], int arrC[], int n)
 int main()
 {
 	
-	const int n = 15; //размер массива равен 15
-	int x[n] = {};//создание массива
-	int c[n] = {};//создаем выходной массив
+	const int n = 15; 
+	int x[n] = {};
+	int c[n] = {};
 	int a;
 	int b;
 	for (int i = 0; i < n;i++)
